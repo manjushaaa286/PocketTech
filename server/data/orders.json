@@ -1,5 +1,34 @@
 [
   {
+    "id": "o_0hgyhMXCfX",
+    "items": [
+      {
+        "id": "p1",
+        "name": "Apple iPhone 15 (128GB)",
+        "price": 58999,
+        "image": "/uploads/iphone.jpg",
+        "qty": 1
+      }
+    ],
+    "customer": {
+      "fullName": "example",
+      "phone": "1234456889",
+      "email": "example"
+    },
+    "address": {
+      "line1": "afaf",
+      "line2": "afafa",
+      "city": "fafa",
+      "state": "fa",
+      "pincode": "afafa"
+    },
+    "payment": {
+      "method": "COD"
+    },
+    "status": "PLACED",
+    "createdAt": "2026-01-01T18:34:00.951Z"
+  },
+  {
     "id": "o_RNG8OyFeD2",
     "items": [
       {
