@@ -17,7 +17,7 @@ export default function Contact(){
       setStatus({ type:"err", msg: data?.message || "Failed to send." });
       return;
     }
-    setStatus({ type:"ok", msg:"Message sent. Stored on server for review." });
+    setStatus({ type:"ok", msg:"Message successfuly sent." });
     setForm({ fullName:"", email:"", message:"" });
   }
 

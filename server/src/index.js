@@ -41,6 +41,30 @@ const upload = multer({ storage, limits: { fileSize: 3 * 1024 * 1024 } });
 
 app.get("/api/health", (req, res) => res.json({ ok: true, port: PORT }));
 
+/* ===================== MAILER (CREATE ONCE) ===================== */
+
+const MAIL_FROM = process.env.GMAIL_USER || "";
+const MAIL_PASS = process.env.GMAIL_APP_PASSWORD || "";
+const CONTACT_TO = process.env.CONTACT_TO || "mganitham@gmail.com";
+
+let transporter = null;
+
+if (MAIL_FROM && MAIL_PASS) {
+  transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: { user: MAIL_FROM, pass: MAIL_PASS },
+  });
+
+  // Optional but helpful logs
+  transporter.verify()
+    .then(() => console.log("Mailer ready (Gmail auth ok)"))
+    .catch((err) => console.error("Mailer verify failed:", err?.message || err));
+} else {
+  console.warn("Mailer not configured. Set GMAIL_USER and GMAIL_APP_PASSWORD in server/.env");
+}
+
+/* ===================== PRODUCTS ===================== */
+
 app.get("/api/products", (req, res) => {
   const q = (req.query.q || "").toString().toLowerCase();
   const category = (req.query.category || "").toString();
@@ -55,6 +79,7 @@ app.get("/api/products", (req, res) => {
   );
   res.json(out);
 });
+
 app.get("/api/products/:id", (req, res) => {
   const products = readJson("products.json", []);
   const item = products.find(p => p.id === req.params.id);
@@ -62,6 +87,7 @@ app.get("/api/products/:id", (req, res) => {
   res.json(item);
 });
 
+/* ===================== SELL ===================== */
 
 app.post("/api/sell", upload.single("photo"), (req, res) => {
   const { name, brand, category, expectedPrice, condition, notes } = req.body;
@@ -84,32 +110,44 @@ app.post("/api/sell", upload.single("photo"), (req, res) => {
   res.json({ ok: true, record });
 });
 
-app.post("/api/contact", async (req, res) =>{
-  const { fullName, email, message } = req.body || {};
-  if (!fullName || !email || !message) return res.status(400).json({ message: "Full name, email and message are required." });
+/* ===================== CONTACT (SAVE + SEND EMAIL) ===================== */
 
-  const contacts = readJson("contacts.json", []);
-  contacts.unshift({ id: `c_${nanoid(10)}`, fullName, email, message, createdAt: new Date().toISOString() });
-  writeJson("contacts.json", contacts);
+app.post("/api/contact", async (req, res) => {
+  try {
+    const { fullName, email, message } = req.body || {};
+    if (!fullName || !email || !message) {
+      return res.status(400).json({ message: "Full name, email and message are required." });
+    }
 
+    // Save to contacts.json (keep your existing behavior)
+    const contacts = readJson("contacts.json", []);
+    contacts.unshift({ id: `c_${nanoid(10)}`, fullName, email, message, createdAt: new Date().toISOString() });
+    writeJson("contacts.json", contacts);
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
+    // Send email
+    if (!transporter) {
+      return res.status(500).json({
+        message: "Email not configured on server. Set GMAIL_USER and GMAIL_APP_PASSWORD in server/.env and restart server."
+      });
+    }
+
+    const info = await transporter.sendMail({
+      from: `"PocketTech Contact" <${MAIL_FROM}>`,
+      to: CONTACT_TO,                 // <-- this is your inbox (set in .env)
+      replyTo: email,                 // <-- reply goes to the user who filled the form
+      subject: "New PocketTech Contact Message",
+      text: `Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${message}`,
+    });
+
+    console.log("Contact email sent:", info.messageId);
+    return res.json({ ok: true, messageId: info.messageId });
+  } catch (err) {
+    console.error("Contact email error:", err);
+    return res.status(500).json({ message: err?.message || "Failed to send email." });
+  }
 });
 
-await transporter.sendMail({
-  from: process.env.GMAIL_USER,
-  to: "manjushaganitham789@gmail.com",
-  subject: "New PocketTech Contact Message",
-  text: `Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${message}`,
-});
-
-  res.json({ ok: true });
-});
+/* ===================== ORDERS ===================== */
 
 app.post("/api/orders", (req, res) => {
   const { items, customer, address, payment } = req.body || {};

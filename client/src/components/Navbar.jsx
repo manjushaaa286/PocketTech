@@ -97,6 +97,11 @@ export default function Navbar(){
               {count}
             </span>
           </NavLink>
+
+          {/* ✅ LOGOUT BUTTON */}
+          <NavLink to="/logout" className="btn ghost">
+            Logout
+          </NavLink>
         </div>
       </div>
     </div>
