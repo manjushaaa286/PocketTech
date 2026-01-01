@@ -1,0 +1,614 @@
+[
+  {
+    "id": "p1",
+    "name": "Apple iPhone 15 (128GB)",
+    "category": "Mobiles",
+    "brand": "Apple",
+    "price": 58999,
+    "condition": "Excellent",
+    "storage": "128GB",
+    "color": "Black",
+    "image": "/uploads/iphone.jpg",
+    "rating": 4.8,
+    "mrp": 71950,
+    "discountPct": 18,
+    "emiFrom": 4917,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Apple",
+      "Category": "Mobiles",
+      "Condition": "Excellent",
+      "Storage": "128GB",
+      "Color": "Black",
+      "Rating": "4.8"
+    }
+  },
+  {
+    "id": "p2",
+    "name": "Samsung Galaxy S24 (256GB)",
+    "category": "Mobiles",
+    "brand": "Samsung",
+    "price": 64999,
+    "condition": "Very Good",
+    "storage": "256GB",
+    "color": "Gray",
+    "image": "/uploads/s24.jpg",
+    "rating": 4.7,
+    "mrp": 79267,
+    "discountPct": 18,
+    "emiFrom": 5417,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Samsung",
+      "Category": "Mobiles",
+      "Condition": "Very Good",
+      "Storage": "256GB",
+      "Color": "Gray",
+      "Rating": "4.7"
+    }
+  },
+  {
+    "id": "p3",
+    "name": "Google Pixel 8 (128GB)",
+    "category": "Mobiles",
+    "brand": "Google",
+    "price": 47999,
+    "condition": "Excellent",
+    "storage": "128GB",
+    "color": "Obsidian",
+    "image": "/uploads/pixel8.jpg",
+    "rating": 4.6,
+    "mrp": 58535,
+    "discountPct": 18,
+    "emiFrom": 4000,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Google",
+      "Category": "Mobiles",
+      "Condition": "Excellent",
+      "Storage": "128GB",
+      "Color": "Obsidian",
+      "Rating": "4.6"
+    }
+  },
+  {
+    "id": "p4",
+    "name": "OnePlus 12R (256GB)",
+    "category": "Mobiles",
+    "brand": "OnePlus",
+    "price": 39999,
+    "condition": "Very Good",
+    "storage": "256GB",
+    "color": "Blue",
+    "image": "/uploads/oneplus12r.jpg",
+    "rating": 4.5,
+    "mrp": 48779,
+    "discountPct": 18,
+    "emiFrom": 3333,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "OnePlus",
+      "Category": "Mobiles",
+      "Condition": "Very Good",
+      "Storage": "256GB",
+      "Color": "Blue",
+      "Rating": "4.5"
+    }
+  },
+  {
+    "id": "p5",
+    "name": "MacBook Air M1 (8GB/256GB)",
+    "category": "Laptops",
+    "brand": "Apple",
+    "price": 59999,
+    "condition": "Excellent",
+    "storage": "256GB SSD",
+    "color": "Space Gray",
+    "image": "/uploads/airm1.jpg",
+    "rating": 4.8,
+    "mrp": 73170,
+    "discountPct": 18,
+    "emiFrom": 5000,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Apple",
+      "Category": "Laptops",
+      "Condition": "Excellent",
+      "Storage": "256GB SSD",
+      "Color": "Space Gray",
+      "Rating": "4.8"
+    }
+  },
+  {
+    "id": "p6",
+    "name": "Dell XPS 13 (i7/16GB/512GB)",
+    "category": "Laptops",
+    "brand": "Dell",
+    "price": 74999,
+    "condition": "Very Good",
+    "storage": "512GB SSD",
+    "color": "Silver",
+    "image": "/uploads/xps13.jpg",
+    "rating": 4.6,
+    "mrp": 91462,
+    "discountPct": 18,
+    "emiFrom": 6250,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Dell",
+      "Category": "Laptops",
+      "Condition": "Very Good",
+      "Storage": "512GB SSD",
+      "Color": "Silver",
+      "Rating": "4.6"
+    }
+  },
+  {
+    "id": "p7",
+    "name": "HP Victus Gaming (16GB/512GB)",
+    "category": "Laptops",
+    "brand": "HP",
+    "price": 68999,
+    "condition": "Good",
+    "storage": "512GB SSD",
+    "color": "Black",
+    "image": "/uploads/victus.jpg",
+    "rating": 4.4,
+    "mrp": 84145,
+    "discountPct": 18,
+    "emiFrom": 5750,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "HP",
+      "Category": "Laptops",
+      "Condition": "Good",
+      "Storage": "512GB SSD",
+      "Color": "Black",
+      "Rating": "4.4"
+    }
+  },
+  {
+    "id": "p8",
+    "name": "ThinkPad X1 Carbon (i7/16GB/512GB)",
+    "category": "Laptops",
+    "brand": "Lenovo",
+    "price": 70999,
+    "condition": "Very Good",
+    "storage": "512GB SSD",
+    "color": "Black",
+    "image": "/uploads/think.jpg",
+    "rating": 4.6,
+    "mrp": 86584,
+    "discountPct": 18,
+    "emiFrom": 5917,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Lenovo",
+      "Category": "Laptops",
+      "Condition": "Very Good",
+      "Storage": "512GB SSD",
+      "Color": "Black",
+      "Rating": "4.6"
+    }
+  },
+  {
+    "id": "p9",
+    "name": "iPad 10th Gen (64GB Wi\u2011Fi)",
+    "category": "Tablets",
+    "brand": "Apple",
+    "price": 30999,
+    "condition": "Excellent",
+    "storage": "64GB",
+    "color": "Blue",
+    "image": "/uploads/10thgen.jpg",
+    "rating": 4.6,
+    "mrp": 37804,
+    "discountPct": 18,
+    "emiFrom": 2583,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Apple",
+      "Category": "Tablets",
+      "Condition": "Excellent",
+      "Storage": "64GB",
+      "Color": "Blue",
+      "Rating": "4.6"
+    }
+  },
+  {
+    "id": "p10",
+    "name": "Galaxy Tab S9 (128GB)",
+    "category": "Tablets",
+    "brand": "Samsung",
+    "price": 49999,
+    "condition": "Very Good",
+    "storage": "128GB",
+    "color": "Gray",
+    "image": "/uploads/s9.jpg",
+    "rating": 4.5,
+    "mrp": 60974,
+    "discountPct": 18,
+    "emiFrom": 4167,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Samsung",
+      "Category": "Tablets",
+      "Condition": "Very Good",
+      "Storage": "128GB",
+      "Color": "Gray",
+      "Rating": "4.5"
+    }
+  },
+  {
+    "id": "p11",
+    "name": "Surface Go 3 (8GB/128GB)",
+    "category": "Tablets",
+    "brand": "Microsoft",
+    "price": 28999,
+    "condition": "Good",
+    "storage": "128GB",
+    "color": "Silver",
+    "image": "/uploads/surface.jpg",
+    "rating": 4.2,
+    "mrp": 35365,
+    "discountPct": 18,
+    "emiFrom": 2417,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Microsoft",
+      "Category": "Tablets",
+      "Condition": "Good",
+      "Storage": "128GB",
+      "Color": "Silver",
+      "Rating": "4.2"
+    }
+  },
+  {
+    "id": "p12",
+    "name": "AirPods Pro (2nd Gen)",
+    "category": "Accessories",
+    "brand": "Apple",
+    "price": 16999,
+    "condition": "Excellent",
+    "storage": "-",
+    "color": "White",
+    "image": "/uploads/air.jpg",
+    "rating": 4.7,
+    "mrp": 20730,
+    "discountPct": 18,
+    "emiFrom": 1417,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Apple",
+      "Category": "Accessories",
+      "Condition": "Excellent",
+      "Storage": "-",
+      "Color": "White",
+      "Rating": "4.7"
+    }
+  },
+  {
+    "id": "p13",
+    "name": "Sony WH\u20111000XM4 Headphones",
+    "category": "Accessories",
+    "brand": "Sony",
+    "price": 18999,
+    "condition": "Very Good",
+    "storage": "-",
+    "color": "Black",
+    "image": "/uploads/xm.jpg",
+    "rating": 4.7,
+    "mrp": 23170,
+    "discountPct": 18,
+    "emiFrom": 1583,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Sony",
+      "Category": "Accessories",
+      "Condition": "Very Good",
+      "Storage": "-",
+      "Color": "Black",
+      "Rating": "4.7"
+    }
+  },
+  {
+    "id": "p14",
+    "name": "Anker Power Bank 20000mAh",
+    "category": "Accessories",
+    "brand": "Anker",
+    "price": 2199,
+    "condition": "New",
+    "storage": "-",
+    "color": "Black",
+    "image": "/uploads/anker.jpg",
+    "rating": 4.5,
+    "mrp": 2682,
+    "discountPct": 18,
+    "emiFrom": 183,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Anker",
+      "Category": "Accessories",
+      "Condition": "New",
+      "Storage": "-",
+      "Color": "Black",
+      "Rating": "4.5"
+    }
+  },
+  {
+    "id": "p15",
+    "name": "Logitech MX Master Mouse",
+    "category": "Accessories",
+    "brand": "Logitech",
+    "price": 6999,
+    "condition": "Excellent",
+    "storage": "-",
+    "color": "Graphite",
+    "image": "/uploads/nouse.jpg",
+    "rating": 4.8,
+    "mrp": 8535,
+    "discountPct": 18,
+    "emiFrom": 583,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Logitech",
+      "Category": "Accessories",
+      "Condition": "Excellent",
+      "Storage": "-",
+      "Color": "Graphite",
+      "Rating": "4.8"
+    }
+  },
+  {
+    "id": "p16",
+    "name": "Apple Watch SE (44mm)",
+    "category": "Wearables",
+    "brand": "Apple",
+    "price": 21999,
+    "condition": "Very Good",
+    "storage": "-",
+    "color": "Midnight",
+    "image": "/uploads/watch.jpg",
+    "rating": 4.5,
+    "mrp": 26828,
+    "discountPct": 18,
+    "emiFrom": 1833,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Apple",
+      "Category": "Wearables",
+      "Condition": "Very Good",
+      "Storage": "-",
+      "Color": "Midnight",
+      "Rating": "4.5"
+    }
+  },
+  {
+    "id": "p17",
+    "name": "Fitbit Charge 6",
+    "category": "Wearables",
+    "brand": "Fitbit",
+    "price": 9999,
+    "condition": "New",
+    "storage": "-",
+    "color": "Black",
+    "image": "/uploads/fitbit.jpg",
+    "rating": 4.3,
+    "mrp": 12194,
+    "discountPct": 18,
+    "emiFrom": 833,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Fitbit",
+      "Category": "Wearables",
+      "Condition": "New",
+      "Storage": "-",
+      "Color": "Black",
+      "Rating": "4.3"
+    }
+  },
+  {
+    "id": "p18",
+    "name": "Kindle Paperwhite (8GB)",
+    "category": "Other",
+    "brand": "Amazon",
+    "price": 8999,
+    "condition": "Very Good",
+    "storage": "8GB",
+    "color": "Black",
+    "image": "/uploads/kindle.jpg",
+    "rating": 4.4,
+    "mrp": 10974,
+    "discountPct": 18,
+    "emiFrom": 750,
+    "warranty": "6 Months Warranty",
+    "returns": "7-day replacement",
+    "highlights": [
+      "Verified quality checks completed",
+      "Battery/health checked",
+      "No hidden defects disclosed"
+    ],
+    "offers": [
+      "Extra 5% off with eligible bank cards",
+      "No-cost EMI available on select cards"
+    ],
+    "specs": {
+      "Brand": "Amazon",
+      "Category": "Other",
+      "Condition": "Very Good",
+      "Storage": "8GB",
+      "Color": "Black",
+      "Rating": "4.4"
+    }
+  }
+]

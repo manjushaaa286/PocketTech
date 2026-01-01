@@ -1,0 +1,17 @@
+{
+  "name": "pockettech-fullstack",
+  "private": true,
+  "version": "1.0.3",
+  "description": "PocketTech - verified pre-owned devices marketplace (React + Node/Express).",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "concurrently \"npm start --prefix server\" \"npm run preview --prefix client\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  },
+  "dependencies": {
+    "nodemailer": "^7.0.11"
+  }
+}

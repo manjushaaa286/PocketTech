@@ -1,0 +1,60 @@
+[
+  {
+    "id": "o_nM-wrlrsJR",
+    "items": [
+      {
+        "id": "p1",
+        "name": "Apple iPhone 15 (128GB)",
+        "price": 58999,
+        "image": "/uploads/iphone.jpg",
+        "qty": 1
+      }
+    ],
+    "customer": {
+      "fullName": "hjgjg",
+      "phone": "jgh",
+      "email": "jgjg"
+    },
+    "address": {
+      "line1": "jkgkg",
+      "line2": "kgkg",
+      "city": "fanfaf",
+      "state": "kgkg",
+      "pincode": "gkg"
+    },
+    "payment": {
+      "method": "UPI"
+    },
+    "status": "PLACED",
+    "createdAt": "2025-12-16T05:16:50.836Z"
+  },
+  {
+    "id": "o_ylc3YP7AHr",
+    "items": [
+      {
+        "id": "p1",
+        "name": "Apple iPhone 15 (128GB)",
+        "price": 58999,
+        "image": "/uploads/iphone.jpg",
+        "qty": 1
+      }
+    ],
+    "customer": {
+      "fullName": "knlhlh",
+      "phone": "64464",
+      "email": "fjfjfjf"
+    },
+    "address": {
+      "line1": "dhdhd",
+      "line2": "hdhdh",
+      "city": "dhdhdh",
+      "state": "",
+      "pincode": "hdhdhd"
+    },
+    "payment": {
+      "method": "UPI"
+    },
+    "status": "PLACED",
+    "createdAt": "2025-12-16T04:39:43.108Z"
+  }
+]
