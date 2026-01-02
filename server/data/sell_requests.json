@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": "s_McPGJ6vKDX",
+    "name": "s26 ultra",
+    "brand": "samsung",
+    "category": "Mobiles",
+    "expectedPrice": 100000,
+    "condition": "Good",
+    "notes": "well working phone",
+    "photo": "/uploads/1767293317810_RgYpLaG2.png",
+    "createdAt": "2026-01-01T18:48:37.819Z"
+  }
+]

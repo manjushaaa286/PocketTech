@@ -1,5 +1,34 @@
 [
   {
+    "id": "o_B-uCsKSuid",
+    "items": [
+      {
+        "id": "p1",
+        "name": "Apple iPhone 15 (128GB)",
+        "price": 58999,
+        "image": "/uploads/iphone.jpg",
+        "qty": 1
+      }
+    ],
+    "customer": {
+      "fullName": "manjushaaa",
+      "phone": "8008508848",
+      "email": "mganitham@gmail.com"
+    },
+    "address": {
+      "line1": "Ladies hostel",
+      "line2": "",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "pincode": "517501"
+    },
+    "payment": {
+      "method": "COD"
+    },
+    "status": "PLACED",
+    "createdAt": "2026-01-01T18:49:46.406Z"
+  },
+  {
     "id": "o_0hgyhMXCfX",
     "items": [
       {

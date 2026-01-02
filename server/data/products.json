@@ -610,5 +610,24 @@
       "Color": "Black",
       "Rating": "4.4"
     }
+  },
+  {
+    "id": "p99",
+    "name":"Apple Airpods Pro(2nd gen)",
+    "brand":"Apple",
+    "category":"Accessories",
+    "price":14999,
+    "condition":"Excellent",
+    "color":"White",
+    "image":"/uploads/2pro.jpg",
+    "rating": 4.7,
+    "mrp":25999,
+    "discountPct":36,
+    "emiFrom":2000,
+    "warranty":"3 month warranty",
+    "returns":"7-day replacement",
+    "highlights":["Charing case provided"],
+    "offers":["Offers eligible on bank cards"],
+    "specs":{"Brand":"Apple","Category":"Accessories","Condition":"Excellent"}
   }
 ]

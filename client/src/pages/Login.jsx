@@ -11,14 +11,31 @@ export default function Login(){
     e.preventDefault();
     setError("");
 
-    if (!username.trim() || !password.trim()){
+    const u = username.trim();
+    const p = password.trim();
+
+    if (!u || !p){
       setError("Please enter username and password.");
+      return;
+    }
+
+    // ✅ Username validation: must be @gmail.com
+    const gmailOk = /^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(u);
+    if (!gmailOk){
+      setError("Username must be a valid @gmail.com address.");
+      return;
+    }
+
+    // ✅ Password validation: must be a 10-digit mobile number (India: starts 6-9)
+    const mobileOk = /^[6-9]\d{9}$/.test(p);
+    if (!mobileOk){
+      setError("Password must be a valid 10-digit number.");
       return;
     }
 
     sessionStorage.setItem("pt_logged_in", "true");
 
-    // 🔥 tell App.jsx to re-check auth and show Navbar
+    // tell App.jsx to re-check auth and show Navbar
     window.dispatchEvent(new Event("pockettech:auth"));
 
     navigate("/", { replace: true });
@@ -62,6 +79,7 @@ export default function Login(){
 
         <div className="card" style={{ padding: 18 }}>
           <h2 style={{ margin: 0, fontSize: 22 }}>Welcome back</h2>
+
           {error && (
             <div
               className="card"
@@ -78,10 +96,12 @@ export default function Login(){
 
           <form onSubmit={handleLogin} style={{ marginTop: 14, display: "grid", gap: 12 }}>
             <div>
-              <div style={{ marginBottom: 6, color: "var(--muted)", fontSize: 12 }}>Username</div>
+              <div style={{ marginBottom: 6, color: "var(--muted)", fontSize: 12 }}>
+                Username (Email)
+              </div>
               <input
                 className="input"
-                placeholder="Enter username"
+                placeholder="Enter email"
                 value={username}
                 onChange={e=>setUsername(e.target.value)}
                 autoComplete="username"
@@ -89,7 +109,9 @@ export default function Login(){
             </div>
 
             <div>
-              <div style={{ marginBottom: 6, color: "var(--muted)", fontSize: 12 }}>Password</div>
+              <div style={{ marginBottom: 6, color: "var(--muted)", fontSize: 12 }}>
+                Password
+              </div>
               <input
                 className="input"
                 type="password"
