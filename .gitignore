@@ -3,3 +3,5 @@ client/node_modules/
 server/node_modules/
 .envPT.zip
 server/data/contacts.json server/data/orders.json server/data/products.json server/data/sell_requests.json
+PT.zip
+server/.env
