@@ -27,11 +27,17 @@ export default function Login(){
     }
 
     // ✅ Password validation: must be a 10-digit mobile number (India: starts 6-9)
-    const mobileOk = /^[6-9]\d{9}$/.test(p);
-    if (!mobileOk){
-      setError("Password must be a valid 10-digit number.");
-      return;
-    }
+    // ✅ Strong password validation
+const strongPwd =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+
+if (!strongPwd.test(p)) {
+  setError(
+    "Password must be at least 8 characters and include uppercase, lowercase, number, and special character."
+  );
+  return;
+}
+
 
     sessionStorage.setItem("pt_logged_in", "true");
 
