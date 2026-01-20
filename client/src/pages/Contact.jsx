@@ -10,54 +10,48 @@ export default function Contact() {
 
   const [status, setStatus] = useState({ type: "", msg: "" });
 
-  // QUESTION 5: show / hide section
-  const [showSection, setShowSection] = useState(true);
+  // 5
 
-  function toggleSection() {
-    setShowSection(!showSection);
+async function submit(e) {
+  e.preventDefault();
+  setStatus({ type: "", msg: "" });
+
+  // quick client-side required validation (prevents 400)
+  if (!form.fullName.trim() || !form.email.trim() || !form.message.trim()) {
+    setStatus({ type: "err", msg: "Please fill Full name, Email and Message." });
+    return;
   }
 
-  async function submit(e) {
-    e.preventDefault();
-    setStatus({ type: "", msg: "" });
-
+  try {
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form)
     });
 
-    const data = await res.json().catch(() => ({}));
+    const text = await res.text();        // read raw response safely
+    let data = {};
+    try { data = JSON.parse(text); } catch {}
+
     if (!res.ok) {
-      setStatus({ type: "err", msg: data?.message || "Failed to send." });
+      setStatus({ type: "err", msg: data?.message || `Failed to send (HTTP ${res.status}).` });
       return;
     }
 
-    setStatus({ type: "ok", msg: "Message successfully sent." });
+    setStatus({ type: "ok", msg: data?.message || "Message successfully sent." });
     setForm({ fullName: "", email: "", message: "" });
+
+  } catch (err) {
+    setStatus({ type: "err", msg: "Network error: server not reachable." });
   }
+}
+
 
   return (
     <div className="container" style={{ padding: "22px 18px 40px", maxWidth: 760 }}>
       <div className="pill">Contact</div>
       <h2 style={{ margin: "10px 0 0", fontSize: 30 }}>Get in touch</h2>
 
-      {/* QUESTION 5 BUTTON */}
-      <button
-        type="button"
-        className="btn"
-        onClick={toggleSection}
-        style={{ marginTop: 12 }}
-      >
-        {showSection ? "Hide Section" : "Show Section"}
-      </button>
-
-      {/* QUESTION 5 SECTION */}
-      {showSection && (
-        <div className="card" style={{ padding: 12, marginTop: 12 }}>
-          <p>This section can be shown or hidden.</p>
-        </div>
-      )}
 
       <div className="card" style={{ padding: 18, marginTop: 16 }}>
         <form onSubmit={submit} className="grid" style={{ gap: 12 }}>

@@ -1,4 +1,5 @@
 node_modules/
 client/node_modules/
 server/node_modules/
-.env
+.envPT.zip
+server/data/contacts.json server/data/orders.json server/data/products.json server/data/sell_requests.json

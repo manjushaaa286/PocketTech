@@ -112,6 +112,8 @@ app.post("/api/sell", upload.single("photo"), (req, res) => {
 
 /* ===================== CONTACT (SAVE + SEND EMAIL) ===================== */
 
+/* ===================== CONTACT (SAVE + OPTIONAL EMAIL) ===================== */
+
 app.post("/api/contact", async (req, res) => {
   try {
     const { fullName, email, message } = req.body || {};
@@ -119,33 +121,44 @@ app.post("/api/contact", async (req, res) => {
       return res.status(400).json({ message: "Full name, email and message are required." });
     }
 
-    // Save to contacts.json (keep your existing behavior)
+    // ✅ Always save to contacts.json first
     const contacts = readJson("contacts.json", []);
-    contacts.unshift({ id: `c_${nanoid(10)}`, fullName, email, message, createdAt: new Date().toISOString() });
+    contacts.unshift({
+      id: `c_${nanoid(10)}`,
+      fullName,
+      email,
+      message,
+      createdAt: new Date().toISOString()
+    });
     writeJson("contacts.json", contacts);
 
-    // Send email
-    if (!transporter) {
-      return res.status(500).json({
-        message: "Email not configured on server. Set GMAIL_USER and GMAIL_APP_PASSWORD in server/.env and restart server."
-      });
+    // ✅ Try to send email (but NEVER fail the request)
+    if (transporter) {
+      try {
+        const info = await transporter.sendMail({
+          from: `"PocketTech Contact" <${MAIL_FROM}>`,
+          to: CONTACT_TO,
+          replyTo: email,
+          subject: "New PocketTech Contact Message",
+          text: `Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${message}`,
+        });
+        console.log("Contact email sent:", info.messageId);
+      } catch (mailErr) {
+        console.warn("Email send failed (ignored):", mailErr?.message || mailErr);
+      }
+    } else {
+      console.warn("Mailer not configured; saved contact only.");
     }
 
-    const info = await transporter.sendMail({
-      from: `"PocketTech Contact" <${MAIL_FROM}>`,
-      to: CONTACT_TO,                 // <-- this is your inbox (set in .env)
-      replyTo: email,                 // <-- reply goes to the user who filled the form
-      subject: "New PocketTech Contact Message",
-      text: `Name: ${fullName}\nEmail: ${email}\n\nMessage:\n${message}`,
-    });
+    // ✅ Always return success for frontend
+    return res.json({ ok: true, message: "Message saved successfully." });
 
-    console.log("Contact email sent:", info.messageId);
-    return res.json({ ok: true, messageId: info.messageId });
   } catch (err) {
-    console.error("Contact email error:", err);
-    return res.status(500).json({ message: err?.message || "Failed to send email." });
+    console.error("Contact route error:", err);
+    return res.status(500).json({ message: err?.message || "Failed to save message." });
   }
 });
+
 
 /* ===================== ORDERS ===================== */
 
