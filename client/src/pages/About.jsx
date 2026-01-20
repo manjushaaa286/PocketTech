@@ -32,9 +32,12 @@ Through this project, I explored how modern e-commerce websites work, including 
 
 If you would like to know more about the project or get in touch, please feel free to use the Contact page.
           </div>
-    <div style={{ marginTop: 104 }}>
-  <button className="btn primary">Contact Me!</button>
+  <div style={{ marginTop: 104 }}>
+  <Link to="/contact">
+    <button className="btn primary">Contact Me!</button>
+  </Link>
 </div>
+
 
         </div>
       </div>

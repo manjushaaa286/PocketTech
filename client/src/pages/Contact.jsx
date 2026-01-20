@@ -38,7 +38,8 @@ async function submit(e) {
       return;
     }
 
-    setStatus({ type: "ok", msg: data?.message || "Message successfully sent." });
+  setStatus({ type: "ok", msg: "Message successfully sent." });
+
     setForm({ fullName: "", email: "", message: "" });
 
   } catch (err) {
